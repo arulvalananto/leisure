@@ -1,0 +1,13 @@
+services:
+  hermes:
+    image: nousresearch/hermes-agent
+    container_name: hermes
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+    volumes:
+      - ${HOME}/.hermes:/opt/data
+
+    environment:
+      TZ: Asia/Kolkata
