@@ -6,9 +6,15 @@ services:
     tty: true
     restart: unless-stopped
 
+    ports:
+      - "127.0.0.1:9119:9119"
+
     volumes:
       - ${HOME}/Library/Application Support/Hermes:/opt/data
       - ${HOME}/work/leisure/hermes-workspace:/workspace
 
     environment:
       TZ: Asia/Kolkata
+      HERMES_DASHBOARD: "1"
+      HERMES_DASHBOARD_HOST: "0.0.0.0"
+      HERMES_DASHBOARD_PORT: "9119"
