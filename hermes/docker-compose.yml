@@ -8,6 +8,7 @@ services:
 
     volumes:
       - ${HOME}/.hermes:/opt/data
+      - ${HOME}/work/leisure/hermes-workspace:/workspace
 
     environment:
       TZ: Asia/Kolkata
