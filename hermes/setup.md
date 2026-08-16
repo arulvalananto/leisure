@@ -26,7 +26,7 @@ services:
     tty: true
     restart: unless-stopped
     volumes:
-      - ${HOME}/.hermes:/opt/data
+      - ${HOME}/Library/Application Support/Hermes:/opt/data
       - ${HOME}/work/leisure/hermes-workspace:/workspace
     environment:
       TZ: Asia/Kolkata
